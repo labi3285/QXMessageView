@@ -3,7 +3,7 @@ A easy customize tip shower in swift.
 
 ### install
 ```
-pod search QXMaskView
+pod search QXMessageView
 ```
 
 ### simple use
