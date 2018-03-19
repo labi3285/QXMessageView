@@ -30,63 +30,21 @@ extension UIViewController {
     }
 }
 
-
-class LoadingButton: UIControl {
+class DemoView: QXMessageViewContentViewProtocol {
     
-    var loadingHandler: ((() -> ()) -> ())?
-    
-   
-    
-
 }
 
 class ViewController: UIViewController {
 
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-    
-//        showLoading(msg: "登陆中...")
-//
-//        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
-//
-//            self.hideLoading()
-//            self.showSuccess(msg: "登陆中...")
-//
-//        }
-        
         showWarning(msg: "警告")
         
-
+        let demoView = DemoView()
+        let messageView = QXMessageView.messageView(contentView: demoView, superview: self, duration: 1, complete: {
+            // todo
+        })
+        
+        
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        
-        
-        
-        
-        
-//
-//
-        
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-    
-    
-    func getTopVc() -> UIViewController {
-        weak var vc: UIViewController? = self
-        while vc?.presentedViewController != nil {
-            vc = vc?.presentedViewController
-        }
-        return vc!
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
