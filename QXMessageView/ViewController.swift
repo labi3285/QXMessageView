@@ -30,19 +30,30 @@ extension UIViewController {
     }
 }
 
-class DemoView: QXMessageViewContentViewProtocol {
-    
+class DemoView: UIView, QXMessageViewContentViewProtocol {
+    func qxMessageViewContentViewSizeFor(containerSize: CGSize) -> CGSize {
+        return CGSize(width: 100, height: 100)
+    }
+    func qxMessageViewContentViewAnchorCenter() -> CGPoint {
+        return CGPoint.init(x: 0.5, y: 0.5)
+    }
 }
 
 class ViewController: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = UIColor.white
+    }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         showWarning(msg: "警告")
         
-        let demoView = DemoView()
-        let messageView = QXMessageView.messageView(contentView: demoView, superview: self, duration: 1, complete: {
-            // todo
-        })
+//        let demoView = DemoView()
+//        demoView.backgroundColor = UIColor.blue
+//        let messageView = QXMessageView.messageView(contentView: demoView, superview: self.view, duration: 1, complete: {
+//            // todo
+//        })
         
         
     }

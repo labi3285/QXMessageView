@@ -100,7 +100,7 @@ extension QXMessageView {
             let h = min(textSize.height + _kTopBottomMargin * 2, containerSize.height - _kContentTopBottomMinMargin * 2)
             return CGSize(width: w, height: h)
         }
-        public func qxMessageViewContentViewCenterOffSet() -> CGPoint {
+        public func qxMessageViewContentViewAnchorCenter() -> CGPoint {
             return CGPoint(x: 0.5, y: 0.5)
         }
     }
@@ -119,7 +119,7 @@ extension QXMessageView {
         private let _kContentTopBottomMinMargin: CGFloat = 20
         private let _kContentLeftRightMinMargin: CGFloat = 20
         private lazy var _indicatorView: UIActivityIndicatorView = {
-            let one = UIActivityIndicatorView(activityIndicatorStyle: .white)
+            let one = UIActivityIndicatorView(style: .white)
             return one
         }()
         private lazy var _messageLabel: UILabel = {
@@ -169,7 +169,7 @@ extension QXMessageView {
                 return CGSize(width: w, height: h)
             }
         }
-        public func qxMessageViewContentViewCenterOffSet() -> CGPoint {
+        public func qxMessageViewContentViewAnchorCenter() -> CGPoint {
             return CGPoint(x: 0.5, y: 0.5)
         }
     }

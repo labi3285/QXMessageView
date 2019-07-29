@@ -12,7 +12,7 @@ public protocol QXMessageViewContentViewProtocol {
     /// [requried] size for content view
     func qxMessageViewContentViewSizeFor(containerSize: CGSize) -> CGSize
     /// [requried] offset for content view, [0.5,0.5] is for center
-    func qxMessageViewContentViewCenterOffSet() -> CGPoint
+    func qxMessageViewContentViewAnchorCenter() -> CGPoint
 }
 
 public class QXMessageView: UIControl {
@@ -60,7 +60,7 @@ public class QXMessageView: UIControl {
     override public func layoutSubviews() {
         super.layoutSubviews()
         let containerSize = bounds.size
-        let offset = contentView.qxMessageViewContentViewCenterOffSet()
+        let offset = contentView.qxMessageViewContentViewAnchorCenter()
         let size = contentView.qxMessageViewContentViewSizeFor(containerSize: containerSize)
         var x = containerSize.width * offset.x - size.width / 2
         x = max(20, x)
