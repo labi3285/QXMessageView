@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		75BF8D1E23C37BD00001643A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75BF8D1D23C37BD00001643A /* LaunchScreen.storyboard */; };
 		75D6AD1F2005DB37008E76A3 /* QXMessageView.Demo.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 75D6AD1C2005DB37008E76A3 /* QXMessageView.Demo.bundle */; };
 		75D6AD202005DB37008E76A3 /* QXMessageView.Demos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D6AD1D2005DB37008E76A3 /* QXMessageView.Demos.swift */; };
 		75D6AD212005DB37008E76A3 /* QXMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D6AD1E2005DB37008E76A3 /* QXMessageView.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		75BF8D1D23C37BD00001643A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75D6AD1C2005DB37008E76A3 /* QXMessageView.Demo.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = QXMessageView.Demo.bundle; sourceTree = "<group>"; };
 		75D6AD1D2005DB37008E76A3 /* QXMessageView.Demos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QXMessageView.Demos.swift; sourceTree = "<group>"; };
 		75D6AD1E2005DB37008E76A3 /* QXMessageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QXMessageView.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				75D6AD1B2005DB37008E76A3 /* QXMessageView */,
 				75FE3B121FEBD81200CFCC86 /* AppDelegate.swift */,
 				75FE3B141FEBD81200CFCC86 /* ViewController.swift */,
+				75BF8D1D23C37BD00001643A /* LaunchScreen.storyboard */,
 				75FE3B191FEBD81200CFCC86 /* Assets.xcassets */,
 				75FE3B1E1FEBD81200CFCC86 /* Info.plist */,
 			);
@@ -134,6 +137,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75BF8D1E23C37BD00001643A /* LaunchScreen.storyboard in Resources */,
 				75D6AD1F2005DB37008E76A3 /* QXMessageView.Demo.bundle in Resources */,
 				75FE3B1A1FEBD81200CFCC86 /* Assets.xcassets in Resources */,
 			);
@@ -268,11 +272,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4S3D2DBDGU;
 				INFOPLIST_FILE = QXMessageView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "labi3285-lab.QXMessageView";
+				PRODUCT_BUNDLE_IDENTIFIER = com.labi3285.QXUIKitExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -284,11 +288,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4S3D2DBDGU;
 				INFOPLIST_FILE = QXMessageView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "labi3285-lab.QXMessageView";
+				PRODUCT_BUNDLE_IDENTIFIER = com.labi3285.QXUIKitExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

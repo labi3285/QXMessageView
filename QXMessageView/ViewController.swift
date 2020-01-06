@@ -47,7 +47,11 @@ class ViewController: UIViewController {
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        showWarning(msg: "警告")
+        
+//        showFailure(msg: "网络请求失败")
+//        showWarning(msg: "1月6日讯随着本轮西甲武磊攻破巴萨的大门,助西班牙人2-2战平了巴萨之后,武磊的球星效应得到空前的高涨。对此,国内著名主持人孟非在微博")
+        
+        showSuccess(msg: "成功")
         
 //        let demoView = DemoView()
 //        demoView.backgroundColor = UIColor.blue
