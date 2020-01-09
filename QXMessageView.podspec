@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "QXMessageView"
-  s.version      = "0.0.4"
+  s.version      = "0.0.5"
   s.summary      = "A easy customize tip shower in swift."
   s.description  = <<-DESC
                     A easy customize tip shower for show success, failure, warning etc. Just enjoy!
@@ -14,5 +14,7 @@ Pod::Spec.new do |s|
   s.source_files  = "QXMessageView/QXMessageView/*.swift"
   s.resources = "QXMessageView/QXMessageView/QXMessageView.Demo.bundle"
   s.requires_arc = true
+
+# pod trunk push QXMessageView.podspec --allow-warnings
 
 end

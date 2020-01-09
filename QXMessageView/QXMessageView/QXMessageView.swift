@@ -32,12 +32,23 @@ public class QXMessageView: UIControl {
     /// create new message view
     @discardableResult public static func messageView(contentView: UIView & QXMessageViewContentViewProtocol, superview: UIView, duration: TimeInterval, complete: (() -> ())?) -> QXMessageView {
         let messageView = QXMessageView.messageView(contentView: contentView, superview: superview)
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + duration) {
-            messageView.remove()
+        var isRemoved: Bool = false
+        messageView.respondClick = { [weak messageView] in
+            messageView?.remove()
             complete?()
+            isRemoved = true
+        }
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + duration) {
+            if !isRemoved {
+                messageView.remove()
+                complete?()
+            }
         }
         return messageView
     }
+    
+    /// clickHandler
+    public var respondClick: (() -> Void)?
     
     /// remove from inView
     public func remove() {
@@ -46,10 +57,15 @@ public class QXMessageView: UIControl {
     
     /// message view init
     public required init(contentView: UIView & QXMessageViewContentViewProtocol) {
+        contentView.isUserInteractionEnabled = false
         self.contentView = contentView
         self.identify = QXMessageView.createNewIdentify()
         super.init(frame: CGRect.zero)
         addSubview(contentView)
+        addTarget(self, action: #selector(click), for: .touchUpInside)
+    }
+    @objc func click() {
+        respondClick?()
     }
     
     public let identify: Int
@@ -57,6 +73,7 @@ public class QXMessageView: UIControl {
     public required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+        
     override public func layoutSubviews() {
         super.layoutSubviews()
         let containerSize = bounds.size
@@ -76,5 +93,4 @@ public class QXMessageView: UIControl {
         _identify += 1
         return _identify
     }
-    
 }
