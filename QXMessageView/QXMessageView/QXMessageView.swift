@@ -20,6 +20,10 @@ public class QXMessageView: UIControl {
     /// create new message view
     public static func messageView(contentView: UIView & QXMessageViewContentViewProtocol, superview: UIView) -> QXMessageView {
         let messageView = QXMessageView(contentView: contentView)
+        messageView.isHidden = true
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.1) {
+            messageView.isHidden = false
+        }
         superview.addSubview(messageView)
         messageView.translatesAutoresizingMaskIntoConstraints = false
         superview.addConstraint(NSLayoutConstraint(item: messageView, attribute: .left, relatedBy: .equal, toItem: superview, attribute: .left, multiplier: 1, constant: 0))

@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "QXMessageView"
-  s.version      = "0.0.5"
+  s.version      = "0.0.6"
   s.summary      = "A easy customize tip shower in swift."
   s.description  = <<-DESC
                     A easy customize tip shower for show success, failure, warning etc. Just enjoy!
